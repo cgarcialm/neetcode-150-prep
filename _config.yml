@@ -1,0 +1,13 @@
+title: NeetCode 150 Prep
+description: My journey through NeetCode 150 problems for Software Engineer Interview Prep.
+author: Your Name
+email: your-email@example.com
+baseurl: "/neetcode-150-prep" # Important: Change this to your repo name if it's not 'your-username.github.io'
+# If your repo is `your-username.github.io`, then baseurl should be "" (empty string)
+
+# Build settings
+markdown: kramdown
+theme: minima # A simple, clean Jekyll theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
