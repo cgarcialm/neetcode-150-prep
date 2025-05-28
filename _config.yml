@@ -10,3 +10,8 @@ theme: minima # A simple, clean Jekyll theme
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+collections:
+  problems:
+    output: true
+    permalink: /problems/:path/
