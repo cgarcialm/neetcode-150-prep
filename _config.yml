@@ -1,17 +1,28 @@
+# _config.yml
 title: NeetCode 150 Prep
-description: My journey through NeetCode 150 problems for Software Engineer Interview Prep.
+description: My journey through NeetCode 150 problems for Software Engineer Interview Prep
 author: Cecilia Garcia Lopez de Munain
 email: ceci.garcialm@gmail.com
-baseurl: "/neetcode-150-prep" 
+baseurl: "/neetcode-150-prep" # Your GitHub Pages repository name
 
 # Build settings
 markdown: kramdown
-theme: minima # A simple, clean Jekyll theme
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  toc_levels: 1..3 # Enables TOC for H1, H2, H3
 
 collections:
   problems:
     output: true
     permalink: /problems/:path/
+
+sass:
+  sass_dir: _sass
+  style: compressed # Optional: compresses CSS for smaller file size

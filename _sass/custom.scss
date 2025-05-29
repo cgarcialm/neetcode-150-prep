@@ -1,0 +1,76 @@
+// You might need to import Minima's variables to use them
+// @import "minima"; // Uncomment if you want to import Minima's default styles
+
+.page-container {
+  display: flex; /* Use flexbox for layout */
+  max-width: 1200px; /* Limit overall width */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add some padding */
+}
+
+.sidebar {
+  flex: 0 0 250px; /* Sidebar fixed width */
+  padding-right: 20px;
+  border-right: 1px solid #eee; /* A subtle separator */
+  position: sticky; /* Makes sidebar stick while scrolling */
+  top: 20px; /* Distance from top */
+  align-self: flex-start; /* Align to the start of the flex container */
+  max-height: calc(100vh - 40px); /* Max height for scrolling if content is too long */
+  overflow-y: auto; /* Enable scrolling for sidebar content */
+}
+
+.sidebar h3, .sidebar h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 5px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #007bff; /* Example link color */
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.page-content {
+  flex: 1; /* Main content takes remaining space */
+  padding-left: 40px; /* Space between sidebar and content */
+}
+
+// Basic styling for the main content to integrate better
+.wrapper {
+  max-width: 900px; // Adjust based on your preference
+  margin: 0 auto; // Center main content within its flex area
+}
+
+// Adjust for smaller screens (optional, but good practice)
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column; /* Stack sidebar and content on small screens */
+  }
+
+  .sidebar {
+    position: static; /* No longer sticky */
+    max-height: none;
+    border-right: none;
+    padding-right: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .page-content {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
