@@ -16,33 +16,8 @@ Stay tuned for more problem solutions and detailed breakdowns.
 
 ---
 
-## Solved Problems
-
-Here's a list of problems I've solved and documented so far:
-
-<table>
-  <thead>
-    <tr>
-      <th>Date Solved</th>
-      <th>Problem</th>
-      <th>Topic</th>
-      <th>Difficulty</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% assign sorted_problems = site.problems | sort: "date" | reverse %}
-    {% for problem in sorted_problems %}
-    <tr>
-      <td>{{ problem.date | date: "%Y-%m-%d" }}</td>
-      <td><a href="{{ problem.url | relative_url }}">{{ problem.title }}</a></td>
-      <td>{{ problem.topic }}</td>
-      <td>{{ problem.difficulty }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+See a [full list of all solved problems]({{ site.baseurl | relative_url }}/problems/).
 
 ---
-
 ### Useful Links
 * [NeetCode Roadmap](https://neetcode.io/roadmap)

@@ -10,6 +10,10 @@ github_code_path: /code/arrays-hashing/two-sum.py
 ---
 
 ## Problem Description
+{:.no_toc} # Exclude this heading from TOC if you want
+
+* TOC
+{:toc}
 
 Find two numbers in `nums` that sum to `target`. Return their positions. One solution exists, no element reuse.
 
