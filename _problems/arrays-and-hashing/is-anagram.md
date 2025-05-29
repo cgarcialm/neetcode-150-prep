@@ -10,10 +10,6 @@ github_code_path: /code/arrays-hashing/is-anagram.py
 ---
 
 ## Problem Description
-{:.no_toc} # Exclude this heading from TOC if you want
-
-* TOC
-{:toc}
 
 Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, `false` otherwise.
 

@@ -10,10 +10,6 @@ github_code_path: /code/arrays-hashing/duplicate-integer.py
 ---
 
 ## Problem Description
-{:.no_toc} # Exclude this heading from TOC if you want
-
-* TOC
-{:toc}
 
 Given an integer array `nums`, return `true` if any value appears at least twice, `false` if all elements are distinct.
 
