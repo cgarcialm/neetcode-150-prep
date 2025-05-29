@@ -1,6 +1,7 @@
 ---
 layout: default
 title: All NeetCode Problems Solved
+permalink: /problems/
 ---
 
 # All Solved Problems
