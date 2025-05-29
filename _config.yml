@@ -16,7 +16,7 @@ heading_anchor_links: true
 permalink: pretty
 
 # This is the custom sidebar
-nav_paths:
+nav:
   - custom_sidebar_nav.html 
 
 # Collections configuration
