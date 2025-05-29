@@ -1,0 +1,27 @@
+{# _includes/custom_sidebar_nav.html #}
+{% assign sorted_problems = site.problems | sort: "topic" %}
+{% assign problems_by_topic = sorted_problems | group_by: "topic" %}
+
+<nav class="nav-list">
+  <ul>
+    <li class="nav-list-item {% if page.url == '/' | relative_url %}active{% endif %}">
+      <a href="{{ '/' | relative_url }}" class="nav-list-link">Home</a>
+    </li>
+    <li class="nav-list-item {% if page.url == '/problems/' | relative_url %}active{% endif %}">
+      <a href="{{ '/problems/' | relative_url }}" class="nav-list-link">All Problems (Table)</a>
+    </li>
+  </ul>
+
+  {# Dynamically generated problem list #}
+  {% for topic_group in problems_by_topic %}
+    <h4 class="nav-list-section">{{ topic_group.name }}</h4>
+    <ul class="nav-list-children">
+      {% assign sorted_items = topic_group.items | sort: "title" %} {# Sort problems alphabetically within each topic #}
+      {% for problem in sorted_items %}
+        <li class="nav-list-item {% if page.url == problem.url %}active{% endif %}">
+          <a href="{{ problem.url | relative_url }}" class="nav-list-link">{{ problem.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</nav>

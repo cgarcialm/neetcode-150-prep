@@ -1,28 +1,41 @@
 # _config.yml
-title: NeetCode 150 Prep
-description: My journey through NeetCode 150 problems for Software Engineer Interview Prep
-author: Cecilia Garcia Lopez de Munain
-email: ceci.garcialm@gmail.com
-baseurl: "/neetcode-150-prep" # Your GitHub Pages repository name
 
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# Site settings
+title: NeetCode 150 Prep #
+description: My journey through NeetCode 150 problems for Software Engineer Interview Prep #
+baseurl: "/neetcode-150-prep" # GitHub Pages repository name
+url: "https://cgarcialm.github.io" # full site URL
 
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax_highlighter: rouge
-  toc_levels: 1..3 # Enables TOC for H1, H2, H3
+# Theme settings
+remote_theme: just-the-docs/just-the-docs
 
+# Just the Docs specific settings
+color_scheme: dark # or 'light'
+search_enabled: true
+heading_anchor_links: true
+permalink: pretty
+
+# This is the custom sidebar
+nav_paths:
+  - custom_sidebar_nav.html 
+
+# Collections configuration
 collections:
   problems:
     output: true
-    permalink: /problems/:path/
+    permalink: /:collection/:path/ # Just the Docs typically uses a simpler permalink structure
 
-sass:
-  sass_dir: _sass
-  style: compressed # Optional: compresses CSS for smaller file size
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-remote-theme # Required for remote_theme
+  - jekyll-titles-from-headings # Optional, but useful for auto-titles
+
+# Exclude from processing.
+# The theme will manage most includes and layouts.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
